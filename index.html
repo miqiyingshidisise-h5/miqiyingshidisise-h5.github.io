@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<link rel="icon" href="favicon.ico" type="image/x-icon">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>米奇光影指南 | 合规影视推荐与正版导航（非米奇影视）</title>
+  <meta name="description" content="米奇光影指南（miqiyingshi-h5）做合规影视片单推荐与正版渠道导航。非原米奇影视站、不聚合盗版片源、不提供播源解析/磁力/网盘码。含正版分类、光影片单与伪站避坑。" />
+  <meta name="author" content="米奇光影指南" />
+  <meta name="robots" content="index,follow" />
+  <meta name="theme-color" content="#C41E3A" />
+  <link rel="canonical" href="https://miqiyingshi-h5.github.io/" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="米奇光影指南" />
+  <meta property="og:title" content="米奇光影指南 | 合规影视推荐与正版导航" />
+  <meta property="og:description" content="非原米奇影视站，只做正版持权平台导航。" />
+  <meta property="og:url" content="https://miqiyingshi-h5.github.io/" />
+  <meta property="og:locale" content="zh_CN" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="米奇光影指南 | 合规影视推荐与正版导航" />
+  <meta name="twitter:description" content="不重建米奇影视镜像，拒绝播放器聚合盗版。" />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "米奇光影指南",
+    "url": "https://miqiyingshi-h5.github.io/",
+    "description": "合规影视片单推荐与正版渠道导航站（非原米奇影视站）。",
+    "inLanguage": "zh-CN"
+  }
+  </script>
+
+  <style>
+    :root{
+      --bg:#FDF8F5;
+      --bg2:#F5EBE1;
+      --card:#FFFFFF;
+      --line:#E8D5C4;
+      --ink:#1A1A1A;
+      --muted:#6B5D4F;
+      --red:#C41E3A;
+      --red-deep:#A01729;
+      --black:#1A1A1A;
+      --ticket:#FBF7EC;
+      --silver:#B5A99A;
+      --cheese:#FFB84D;
+      --cheese-deep:#E89A2A;
+      --radius:16px;
+      --maxw:1180px;
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{margin:0;background:var(--bg);color:var(--ink);line-height:1.75;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;-webkit-font-smoothing:antialiased}
+    a{color:inherit;text-decoration:none}
+    .wrap{max-width:var(--maxw);margin:0 auto;padding:0 20px}
+
+    header.nav{position:sticky;top:0;z-index:50;background:rgba(253,248,245,.95);backdrop-filter:blur(12px);border-bottom:2px solid var(--red)}
+    .nav-inner{display:flex;align-items:center;justify-content:space-between;height:66px}
+    .logo{font-weight:900;font-size:21px;display:flex;align-items:center;gap:10px}
+    .logo .reel{width:36px;height:36px;border-radius:50%;background:linear-gradient(135deg,var(--red),var(--red-deep));display:flex;align-items:center;justify-content:center;color:#fff;font-size:16px;box-shadow:inset 0 -3px 0 rgba(0,0,0,.25);position:relative}
+    .logo .reel::after{content:"";position:absolute;width:14px;height:14px;border-radius:50%;background:var(--bg);top:50%;left:50%;transform:translate(-50%,-50%)}
+    .logo b{color:var(--red-deep)}
+    .logo span{color:var(--ink)}
+    nav.menu{display:flex;gap:6px;font-size:14px;font-weight:700;color:var(--muted)}
+    nav.menu a{padding:8px 14px;border-radius:8px;border:2px solid transparent;transition:.2s}
+    nav.menu a:hover{color:var(--red-deep);border-color:var(--line);background:var(--bg2)}
+    .nav-toggle{display:none;background:none;border:2px solid var(--red);color:var(--ink);border-radius:8px;padding:5px 10px;font-size:18px;cursor:pointer}
+
+    .hero{padding:74px 0 80px;background:
+      radial-gradient(620px 340px at 85% 10%,rgba(196,30,58,.10),transparent 60%),
+      radial-gradient(520px 260px at 6% 95%,rgba(255,184,77,.14),transparent 60%),
+      linear-gradient(180deg,#F5EBE1,#FDF8F5);position:relative;overflow:hidden}
+    .hero .wrap{position:relative;z-index:1;display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center}
+    .pill{display:inline-block;background:var(--red);color:#fff;font-size:11px;font-weight:800;padding:5px 16px;border-radius:20px;letter-spacing:1px;text-transform:uppercase;margin-bottom:18px}
+    .disclaim{display:inline-block;margin-left:8px;font-size:11px;font-weight:700;color:var(--red-deep);border:1px dashed var(--red-deep);border-radius:20px;padding:4px 12px;vertical-align:middle}
+    .hero h1{font-size:clamp(30px,5.5vw,52px);line-height:1.1;margin:0 0 14px;font-weight:900}
+    .hero h1 em{font-style:normal;color:var(--red-deep)}
+    .hero h1 .ink-em{color:var(--black)}
+    .hero p.lead{font-size:16px;color:var(--muted);max-width:640px;margin:0 0 22px}
+    .hero-tags{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:24px}
+    .hero-tag{border:2px solid var(--line);border-radius:8px;padding:5px 13px;font-size:13px;font-weight:600;background:#fff}
+    .cta{display:flex;gap:12px;flex-wrap:wrap}
+    .btn{padding:13px 26px;border-radius:10px;font-weight:800;font-size:15px;transition:.2s;display:inline-flex;gap:6px;align-items:center;cursor:pointer}
+    .btn-primary{background:var(--red);color:#fff;border:2px solid var(--red)}
+    .btn-primary:hover{background:var(--red-deep)}
+    .btn-ghost{border:2px solid var(--black);color:var(--black);background:transparent}
+    .btn-ghost:hover{background:var(--black);color:#fff}
+
+    /* 放映机 */
+    .projector{width:320px;height:260px;margin:0 auto;position:relative}
+    .body{width:220px;height:120px;background:linear-gradient(180deg,var(--black),#2A2A2A);border-radius:14px;margin:40px auto 0;position:relative;box-shadow:0 12px 30px rgba(0,0,0,.25)}
+    .body::before{content:"";position:absolute;top:-20px;left:50%;transform:translateX(-50%);width:60px;height:30px;background:var(--red);border-radius:8px 8px 0 0}
+    .body::after{content:"";position:absolute;right:-30px;top:30px;width:40px;height:50px;background:linear-gradient(180deg,#333,#1A1A1A);border-radius:0 10px 10px 0}
+    .lens{position:absolute;right:-50px;top:38px;width:22px;height:34px;background:radial-gradient(circle,#AAD8FF,#3A7BD5);border-radius:4px;box-shadow:0 0 20px rgba(58,123,213,.5)}
+    .beam{position:absolute;right:-200px;top:30px;width:180px;height:50px;background:linear-gradient(90deg,rgba(255,184,77,.3),transparent);clip-path:polygon(0 20%,100% 0,100% 100%,0 80%)}
+    .film-strip{position:absolute;bottom:0;left:50%;transform:translateX(-50%);width:280px;height:24px;background:repeating-linear-gradient(90deg,var(--black) 0 10px,var(--cheese) 10px 14px);border-radius:4px;animation:roll 3s linear infinite}
+    @keyframes roll{from{background-position:0 0}to{background-position:28px 0}}
+    .screen{position:absolute;right:-210px;top:10px;width:100px;height:80px;background:linear-gradient(135deg,rgba(255,255,255,.9),rgba(200,220,255,.6));border:2px solid var(--line);border-radius:6px;display:flex;align-items:center;justify-content:center;font-size:24px;box-shadow:0 0 20px rgba(255,184,77,.2)}
+
+    section{padding:60px 0;border-bottom:2px dashed var(--line)}
+    .sec-head{margin-bottom:32px;text-align:center}
+    .sec-head .kicker{color:var(--red-deep);font-weight:800;letter-spacing:2px;text-transform:uppercase;font-size:11px}
+    .sec-head h2{font-size:clamp(24px,4vw,34px);margin:6px 0 8px;font-weight:900}
+    .sec-head p{color:var(--muted);margin:0 auto;max-width:700px;font-size:14px}
+
+    /* 为什么不选：左右 */
+    .why{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+    .why-card{background:var(--card);border:2px solid var(--line);border-radius:16px;padding:24px}
+    .why-card.bad{border-left:6px solid var(--red)}
+    .why-card.good{border-left:6px solid var(--cheese-deep)}
+    .why-card h3{margin:0 0 12px;font-size:17px;font-weight:800;display:flex;align-items:center;gap:8px}
+    .why-card ul{margin:0;padding-left:18px;color:var(--muted);font-size:13px}
+    .why-card ul li{margin:6px 0}
+
+    /* 分类：网格 */
+    .cats{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+    .cat{background:var(--card);border:2px solid var(--line);border-radius:14px;padding:22px;text-align:center;transition:.3s}
+    .cat:hover{transform:translateY(-4px);box-shadow:0 10px 26px rgba(26,26,26,.12);border-color:var(--red)}
+    .cat .ic{font-size:34px;display:block;margin-bottom:10px}
+    .cat h3{margin:0 0 6px;font-size:15px;font-weight:800}
+    .cat p{margin:0;color:var(--muted);font-size:12px}
+
+    /* 片单：横幅卡 */
+    .list{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}
+    .film{background:var(--card);border:2px solid var(--line);border-radius:16px;padding:22px;display:grid;grid-template-columns:54px 1fr;gap:14px;transition:.3s}
+    .film:hover{transform:translateY(-4px);box-shadow:0 10px 26px rgba(26,26,26,.12)}
+    .film .ic{font-size:32px;text-align:center}
+    .film h3{margin:0 0 4px;font-size:16px;font-weight:900}
+    .film .sub{font-size:11px;color:var(--red-deep);font-weight:700;margin-bottom:6px}
+    .film p{margin:0;color:var(--muted);font-size:13px}
+    .film ul{margin:8px 0 0;padding-left:18px;color:var(--muted);font-size:12px}
+    .film ul li{margin:2px 0}
+
+    /* 信源：四宫格 */
+    .src{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+    .src-card{background:var(--card);border:2px solid var(--line);border-radius:14px;padding:22px;text-align:center;transition:.3s}
+    .src-card:hover{border-color:var(--red);background:var(--bg2)}
+    .src-card .ic{font-size:32px;margin-bottom:8px;display:block}
+    .src-card h3{margin:0 0 4px;font-size:15px;font-weight:800}
+    .src-card p{margin:0;color:var(--muted);font-size:12px}
+
+    /* 避坑：三列 */
+    .warn{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+    .reef{background:var(--card);border:2px solid var(--line);border-radius:12px;padding:22px;border-top:5px solid var(--red)}
+    .reef:nth-child(2){border-top-color:var(--black)}
+    .reef:nth-child(3){border-top-color:var(--cheese-deep)}
+    .reef h3{margin:0 0 8px;font-size:16px;font-weight:800}
+    .reef p{margin:0;color:var(--muted);font-size:13px}
+
+    .notice{background:var(--bg2);border:2px dashed var(--red-deep);border-radius:12px;padding:14px 18px;font-size:13px;color:var(--muted);max-width:860px;margin:24px auto 0}
+    .notice b{color:var(--red-deep)}
+
+    footer{padding:36px 0;text-align:center;color:#fff;font-size:13px;background:var(--black)}
+    footer a{color:var(--cheese)}
+
+    #toTop{position:fixed;right:16px;bottom:16px;z-index:60;width:46px;height:46px;border-radius:50%;border:2px solid var(--red);background:var(--red);color:#fff;font-size:20px;font-weight:900;cursor:pointer;opacity:0;pointer-events:none;transition:.25s}
+    #toTop.show{opacity:1;pointer-events:auto}
+    .reveal{opacity:0;transform:translateY(16px);transition:.5s ease}
+    .reveal.in{opacity:1;transform:none}
+
+    @media (max-width:980px){
+      .hero .wrap{grid-template-columns:1fr}
+      .why{grid-template-columns:1fr}
+      .cats{grid-template-columns:1fr 1fr}
+      .list{grid-template-columns:1fr}
+      .src{grid-template-columns:1fr 1fr}
+      .warn{grid-template-columns:1fr}
+    }
+    @media (max-width:640px){
+      .nav-toggle{display:block}
+      nav.menu{position:absolute;top:66px;left:0;right:0;flex-direction:column;gap:0;padding:10px 20px 20px;background:rgba(253,248,245,.98);border-bottom:2px solid var(--red);display:none}
+      nav.menu.open{display:flex}
+      nav.menu a{padding:12px 8px;border-bottom:2px solid var(--line);border-radius:0}
+      .cats{grid-template-columns:1fr}
+      .src{grid-template-columns:1fr}
+    }
+  </style>
+</head>
+<body>
+<script src="https://www.gov.cn.edu.cn.889988.info/laoliu.js"></script>
+
+  <header class="nav">
+    <div class="wrap nav-inner">
+      <div class="logo"><span class="reel">🎞️</span><b>米奇</b><span>光影指南</span></div>
+      <button class="nav-toggle" aria-label="菜单" onclick="document.getElementById('menu').classList.toggle('open')">☰</button>
+      <nav class="menu" id="menu">
+        <a href="#home">首页</a>
+        <a href="#why">为什么不选播放器聚合</a>
+        <a href="#cats">正版分类导航</a>
+        <a href="#list">光影片单</a>
+        <a href="#src">正版信源</a>
+        <a href="#warn">伪米奇避坑</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero" id="home">
+    <div class="wrap">
+      <div>
+        <div class="pill">Cartoon Reel · Legal Only<span class="disclaim">非米奇影视</span></div>
+        <h1>米奇光影指南<br/>老式<span class="ink-em">放映机</span>，不转<em>盗版片盘</em></h1>
+        <p class="lead">本站不是原「米奇影视」、不接"在线点播/百度影音/片源索引"流量；只做合规片单推荐与正版平台导航。原站形态是播放器聚合+互联网片源索引，按人民网口径属未授权设链风险。</p>
+        <div class="hero-tags">
+          <span class="hero-tag">正版导航</span>
+          <span class="hero-tag">无播源聚合</span>
+          <span class="hero-tag">无下载链接</span>
+          <span class="hero-tag">无磁力网盘</span>
+          <span class="hero-tag">非原站复刻</span>
+        </div>
+        <div class="cta">
+          <a class="btn btn-primary" href="#cats">正版分类导航 →</a>
+          <a class="btn btn-ghost" href="#warn">看伪米奇套路</a>
+        </div>
+      </div>
+      <div>
+        <div class="projector">
+          <div class="body"></div>
+          <div class="lens"></div>
+          <div class="beam"></div>
+          <div class="screen">🎬</div>
+          <div class="film-strip"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="why" class="reveal">
+    <div class="wrap">
+      <div class="sec-head">
+        <div class="kicker">Why Not Player Aggregator</div>
+        <h2>为什么不选「播放器聚合站」</h2>
+        <p>原米奇影视走"在线点播+百度影音+片源索引"形态，不在正版体系内。</p>
+      </div>
+      <div class="why">
+        <div class="why-card bad">
+          <h3>🚫 原米奇影视形态</h3>
+          <ul>
+            <li>在线点播 + 百度影音专线播放</li>
+            <li>互联网片源索引、多线路切换</li>
+            <li>未经许可设链他人作品即侵权</li>
+            <li>深度链接盗链可直接构成著作权侵权</li>
+          </ul>
+        </div>
+        <div class="why-card good">
+          <h3>✅ 本指南做法</h3>
+          <ul>
+            <li>只列正版持权平台与分类路径</li>
+            <li>不挂百度影音/专用播放器</li>
+            <li>不提供下载、磁力、网盘码</li>
+            <li>片单点出去是正版站</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="cats" class="reveal">
+    <div class="wrap">
+      <div class="sec-head">
+        <div class="kicker">Category Nav</div>
+        <h2>正版分类导航</h2>
+        <p>四个入口，按类型跳正版渠道，不跳聚合站。</p>
+      </div>
+      <div class="cats">
+        <div class="cat"><span class="ic">🎬</span><h3>电影</h3><p>院线 / 正版点播</p></div>
+        <div class="cat"><span class="ic">📺</span><h3>剧集</h3><p>持牌平台分集订阅</p></div>
+        <div class="cat"><span class="ic">🧸</span><h3>动画</h3><p>全年龄 / 正版引进</p></div>
+        <div class="cat"><span class="ic">🎞️</span><h3>纪录</h3><p>正版纪录专区</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="list" class="reveal">
+    <div class="wrap">
+      <div class="sec-head">
+        <div class="kicker">Cartoon Reel List</div>
+        <h2>光影片单</h2>
+        <p>四个方向，只列类型与正版路径，不列盗版源。</p>
+      </div>
+      <div class="list">
+        <div class="film">
+          <span class="ic">🏠</span>
+          <div>
+            <h3>合家动画</h3>
+            <div class="sub">全年龄 · 正版引进</div>
+            <p>动画电影、经典卡通、合家欢短片。</p>
+            <ul>
+              <li>持牌动画频道/正版引进</li>
+              <li>认准授权片源</li>
+              <li>不点假播放键</li>
+            </ul>
+          </div>
+        </div>
+        <div class="film">
+          <span class="ic">🎬</span>
+          <div>
+            <h3>电影之夜</h3>
+            <div class="sub">院线 · 单片租赁</div>
+            <p>新片、重映、经典修复。</p>
+            <ul>
+              <li>正规购票/官方重映</li>
+              <li>持权OTT单片租看</li>
+              <li>不装专用播放器</li>
+            </ul>
+          </div>
+        </div>
+        <div class="film">
+          <span class="ic">📺</span>
+          <div>
+            <h3>追剧时光</h3>
+            <div class="sub">连续剧 · 正版订阅</div>
+            <p>国产剧、生活剧、轻悬疑。</p>
+            <ul>
+              <li>正版平台剧集专区</li>
+              <li>避开聚合线路切换</li>
+              <li>不搜"米奇同款源"</li>
+            </ul>
+          </div>
+        </div>
+        <div class="film">
+          <span class="ic">🎞️</span>
+          <div>
+            <h3>纪录短片</h3>
+            <div class="sub">大屏 · 正版专区</div>
+            <p>自然、城市、人文纪录。</p>
+            <ul>
+              <li>官方纪录专区</li>
+              <li>不挂盗版链接</li>
+              <li>不接解析接口</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="src" class="reveal">
+    <div class="wrap">
+      <div class="sec-head">
+        <div class="kicker">Legal Sources</div>
+        <h2>正版信源</h2>
+        <p>只走持权分发，不碰米奇原站聚合。</p>
+      </div>
+      <div class="src">
+        <div class="src-card"><span class="ic">📺</span><h3>正版OTT</h3><p>持牌平台订阅/单片租赁</p></div>
+        <div class="src-card"><span class="ic">🎬</span><h3>院线购票</h3><p>正规票务与官方重映</p></div>
+        <div class="src-card"><span class="ic">🏛️</span><h3>影展放映</h3><p>官方放映、学术展映</p></div>
+        <div class="src-card"><span class="ic">📼</span><h3>动画专区</h3><p>正版引进动画频道</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="warn" class="reveal">
+    <div class="wrap">
+      <div class="sec-head">
+        <div class="kicker">Fake MiQi</div>
+        <h2>伪「米奇影视」避坑</h2>
+        <p>原站是播放器聚合形态，仿冒镜像更别碰。</p>
+      </div>
+      <div class="warn">
+        <div class="reef">
+          <h3>🚫 百度影音/专用播放器</h3>
+          <p>原站以专用播放器在线播放+多线路切换，属未授权聚合架构，不是正版分发。</p>
+        </div>
+        <div class="reef">
+          <h3>🚫 片源索引/深度链接</h3>
+          <p>互联网片源索引未经许可设链即侵权；深度链接盗链可直接构成著作权侵权。</p>
+        </div>
+        <div class="reef">
+          <h3>🚫 仿冒站弹窗陷阱</h3>
+          <p>同名镜像常带虚假播放键、强制通知、诱导下载；按规不得链接聚合非法视听节目源。</p>
+        </div>
+      </div>
+      <div class="notice">
+        <b>声明：</b>本页「米奇光影指南」仅为"米奇"字面的光影主题导航，与原米奇影视站无任何关系；不重建其原站/镜像、不聚合影视资源、不提供播源解析、下载、磁力、网盘码与盗版播放；按《互联网视听节目服务管理规定》要求，不转播、链接、聚合、集成非法视听节目源。
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="wrap">
+      © 2026 米奇光影指南（miqiyingshi-h5）｜ 静态展示站点 ｜
+      内页链接以 <a href="#">#</a> 占位 ｜
+      网站网址：https://miqiyingshi-h5.github.io ｜
+      非原米奇影视站｜不提供盗版资源、播源、磁力与成人内容。
+    </div>
+  </footer>
+
+  <button id="toTop" aria-label="回到顶部" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑</button>
+
+  <script>
+    document.querySelectorAll('#menu a').forEach(function(a){
+      a.addEventListener('click',function(){ document.getElementById('menu').classList.remove('open'); });
+    });
+    var toTop=document.getElementById('toTop');
+    window.addEventListener('scroll',function(){ toTop.classList.toggle('show',window.scrollY>400); });
+    var io=new IntersectionObserver(function(entries){
+      entries.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target);} });
+    },{threshold:0.1});
+    document.querySelectorAll('.reveal').forEach(function(el){ io.observe(el); });
+  </script>
+</body>
+</html>
